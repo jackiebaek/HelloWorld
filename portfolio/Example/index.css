@@ -1,0 +1,134 @@
+*{
+    margin: 0; padding: 0;
+}
+
+ul,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    line-height: 0;
+}
+
+#wrap{
+    width: 100%;
+}
+
+
+#header_wrap{
+    width: 100%;
+    
+    color:cadetblue;
+}
+
+#sign_menu > .r_sign_menu >li {
+    float:right;
+    margin: 0 20px;
+    color:#272727;
+}
+
+#sign_menu > .r_sign_menu > li> a{
+
+    display: inline-block;
+    font-size: 30px;
+    color: #272727;
+   font-weight: bold;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+#header{
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    
+}
+
+#header > #logo{
+    width:143px;
+    height:59;
+    margin: 50px auto;
+    
+}
+#gnb> ul >li {
+    float:left;
+    height:120px;
+}   /* font-family: "Noto Sans KR", sans-serif;
+*/
+
+#gnb > ul> li > a{
+    display:inline-block;
+    width:600px;
+    font-weight: bold;
+    font-size:30px;
+    color:#272727;
+}
+ 
+.snb_area{
+    position:absolute;
+    width:100%;
+    height:200px;
+    z-index:5;
+    top:80px;
+}
+
+#header> .snb_area{
+    position:absolute;
+    background: rgba(0,1,1,0.5);
+    overflow:hidden;
+    width:100%;
+    height:0;
+    z-index:5;
+    top: 80px;
+}
+#header > .snb_area.navi {
+    animation:slider 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes slider{
+    from{
+        height:0px;
+    }to {
+        height:150px;
+    }
+}
+
+.snb_area > ul{
+    float:left;
+    width: 100%;
+    text-align: center;
+
+}
+.snb_area > ul > li {
+    padding: 3px 0;
+}
+
+.snb_area > ul > li > a  {
+
+    font-size :13px;
+    color:#272727;
+    font-weight: bold;
+}
+    
+
+
+#visual_wrap{
+    width: 100%;
+    height: 500px;
+    background: green;
+    
+}
+
+#visual{
+    width: 1920px;
+    height: 500px;
+    margin: 0 auto; /*absolute 때문에 안먹음 but relative는 먹음*/
+    background: silver;
+    position: relative;
+    z-index: 1;
+}
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+  
+        window.addEventListener('DOMContentLoaded', init); // addEventListener는 지정한 이벤트가 대상에 전달될 때마다 호출할 함수 설정
+        // 
+        function init(){
+            let gnb = document.querySelectorAll('.gnb>li');
+            gnb.forEach(function(ele, index){
+                console.log('aa');
+                ele.innerHTML = 'aaa_'+index;
+
+            });
+
+            
+        }
+    </script>
+</head>
+<body>
+    <ul class="gnb">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

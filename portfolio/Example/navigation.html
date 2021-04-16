@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+        ul,li{list-style: none;}
+        #wrap {
+            width: 100%;
+        }
+
+        #header{
+            width: 1200px;
+            height:100px;
+            margin:0 auto;
+            
+        }
+        .gnb {
+            display:flex;
+            flex-direction: row ;
+            justify-content: space-between;
+            width:600px;
+            background: red;
+        }
+
+        .gnb > li {
+            width :30%;
+          
+        }
+
+        .gnb > li > ul.snb{
+            display:none;
+        }
+        .gnb > li > ul.on{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <ul class="gnb">
+                <li>menu1
+                    <ul class="snb on">
+                        <li>menu1-1</li>
+                        <li>menu1-2</li>
+                        <li>menu1-3</li>
+                    </ul>
+                </li>
+                <li>menu2
+                    <ul>
+                        <li>menu2-1</li>
+                        <li>menu2-2</li>
+                        <li>menu2-3</li>
+                    </ul>
+                </li>
+                <li>menu3
+
+                </li>
+                <li>menu4
+
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+    <script type="text/javascript">
+      
+        //window.addEventListner()
+        window.addEventListener('DOMContentLoaded', init);  //html 이벤트 다 한후 실행해라 뜻.. DOM...
+        function init(){
+            let gnb = document.querySelector('.gnb > li');
+            console.log(gnb);
+       
+            gnb.forEach(function(ele){
+               ele.addEventListener('mouseenter', menuover);
+            });
+        }
+    
+       
+        function menuover(){
+            console.log('aaa');
+        }
+    </script>
+</body>
+</html>
+<!----반복문 for X forEach    forEach는 배열 반복할 때
+// 익명함수 = 함수이름이 없는 함수가 익명함수다.  function(){}
+ //Array.forEach(callback:fnction); 콜백함수가 들어감 
+//for (let i=0; i<gnb.length; i++) 이것과 아래 function forFN과 같은 뜻
+    // ['aaa','ddd','fff','ggg']; 
+        function forFn(x){   //인자값 꼭 value와 index안해도 됨 x, y해도 됨  그런데 element만 가져오면
+            //되어서 x만 씀
+            console.log(x); --->

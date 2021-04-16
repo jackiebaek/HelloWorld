@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+   
+    <div id="wrap">
+        <div id="header_wrap">  <!--width 100%-->
+            <div id="sign_menu">
+                    
+                    <ul class="r_sign_menu">
+                        <li><a href="#">LOGIN </a></li>
+                        <li><a href="#">SIGNIN </a></li>
+
+                    </ul>    
+
+                </div>
+            <!--wrap 안에 wrap-->
+            <div id="header"><!--width: 1200px; , margin: 0 auto; 줄 부분-->
+            
+            
+                <h1 id="logo">
+                    <a href="#"><img src="./images/Artish.png"></a>
+                </h1>
+                <div id="gnb">
+                    <ul onmouseover="mouseIn();" onmouseout="mouseOut();">
+                        <li><a href="#">ABOUT Hanmish</a></li> 
+                        <li><a href="#">ART TOWEL</a></li>   
+                      
+                    </ul>
+                </div>
+                
+            </div>
+      
+                  <!--width 1200px-->
+                    <div class="snb_area" onmouseover="mouseIn();" onmouseout="mouseOut();">
+                    <ul>
+                        <li><a href="#">BRAND</a></li>
+                        <li><a href="#"> MEMBERSHIP</a></li>
+                     
+                    </ul>
+                    <ul>
+                        <li><a href="#">PREMIUM TOWEL</a></li>
+                        <li><a href="#">GOLD TOWEL</a></li>
+                    </ul>
+                    
+                    </div>
+                   
+                    <script>
+                        var target = document.querySelector(".snb_area");
+                    function mouseIn(){
+                        target.setAttribute("class", "snb_area navi");
+                    }
+                    function mouseOut(){
+                        target.setAttribute("class", "snb_area");
+                    }
+                             
+                    </script>
+
+              
+            
+        </div>
+        <div id="visual_wrap">  <!--width 100%-->
+            <div id="visual">   <!--width 1920px-->
+                <div id="banner">
+                    <ul class="banner1">
+                        <li class="fadein"><img src="./images/image1.png"></li>
+                        <li class="fadein"><img src="./images/image2.png"></li>
+                        <li class="fadein"><img src="./images/image3.png"></li>
+                    </ul>
+                </div>
+                
+            
+            
+            
+            </div>
+           
+            <script>
+
+
+                var index=0;
+                var rolling = null;
+                banner(0);
+                function banner(n){
+                   
+                   bannerImg = document.querySelectorAll('.banner1 > li');
+               
+                   if (index>=bannerImg.length) {
+                       index=0;
+                   }
+        
+                   if (n !=undefined){//인자값 있을 때 banner()가 실행될 때 (즉 setInteval을 사용할 때 실행)
+                        index = n;
+                   }
+        
+                    for (i=0; i<bannerImg.length; i++){
+                      // console.log(i, index);
+                       if (i==index){
+                        bannerImg.item(i).setAttribute('class','fadein on');
+        
+        
+                       } else{
+                        bannerImg.item(i).setAttribute('class','fadein');
+        
+                       }
+                    }
+                   // console.log(index);
+                   index++;
+                }
+        
+                function bannerBtn(n){
+                    clearInterval(rolling);
+                
+                    banner(n);
+                    rolling = setInterval(banner,3000);
+                }
+                rolling = setInterval(banner,3000);            
+                      
+            </script> -->
+        </div>
+
+       
+
+    <script type="text/javascript" src="./index.js"></script>
+
+</body>
+</html>

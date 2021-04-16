@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <ul id="banner" class='gnb'>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <ul id="banner" class='gnb2'>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script type="text/javascript">
+        function banner(obj){
+            let index = 0;
+            function slide(){
+                ul = document.querySelectorAll(obj.bannerContainer);
+                if (index == ul.length) index = 0;
+                let beNum = (index == 0) ? (ul.length-1) : (index -1);
+        
+                ul.item(index).setAttribute(obj.bannerItemId,obj.bannerItemIdOn);
+                ul.item(beNum).setAttribute(obj.bannerItemId,obj.bannerItemIdOut);
+
+                index ++;
+                console.log(index);
+                setTimeout(slide,obj.bannerTimer);
+            }
+    
+            slide();
+        }
+        
+        obj = new Object();
+        obj.name = '자동차';
+        obj.carName = '아반떼';
+    
+        obj2 = {
+            bannerContainer:'.gnb > li',
+            bannerItemId:'class',
+            bannerItemIdDefault:'hero',
+            bannerItemIdOn:'hero on',
+            bannerItemIdOut:'hero out',
+            bannerTimer:1000,
+        }
+
+        obj3 = {
+            bannerContainer:'.gnb2 > li',
+            bannerItemId:'class',
+            bannerItemIdDefault:'hero',
+            bannerItemIdOn:'hero on',
+            bannerItemIdOut:'hero out',
+            bannerTimer:2000,
+        }
+    
+        banner(obj2);
+        banner(obj3);
+        </script>
+</body>
+</html>

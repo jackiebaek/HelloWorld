@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1 id="logo">
+                <a href="#"><img src="./css/image/logo.png"> </a>
+
+            </h1>
+            <div id="gnb" >
+                <ul onmouseover="mouseIn();" onmouseout="mouseOut();">
+                    <li><a href="#">학교소개</a></li>
+                    <li><a href="#">교육과정</a></li>
+                    <li><a href="#">취업정보</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                    <li><a href="#">상담신청</a></li>
+                </ul>
+            </div>
+
+            <div class="snb_area" onmouseover="mouseIn();" onmouseout="mouseOut();">
+                <h2><img src="./newimages/snb_img.png"></h2>
+                <ul>
+                    <li><a href="#"> 인사말</a></li>
+                    <li><a href="#">연혁</a></li>
+                    <li><a href="#">교직원소개</a></li>
+                    <li><a href="#">시설소개</a></li>
+                    <li><a href="#">오시는길</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">교육과정</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">취업자인터뷰</a></li>
+                    <li><a href="#">취업현황</a></li>
+                    <li><a href="#">포트폴리오</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">수강후기</a></li>
+                    <li><a href="#">KI이야기</a></li>
+                    <li><a href="#">KI기자단</a></li>
+                    <li><a href="#">교수칼럼</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">상담신청</a></li>
+                    <li><a href="#">지원하기</a></li>
+                    <li><a href="#">자주묻는질문</a></li>
+                    
+            
+                </ul>
+        </div>
+            <script>
+                var target = document.querySelector(".snb_area");
+            function mouseIn(){
+                target.setAttribute("class", "snb_area navi");
+            }
+            function mouseOut(){
+                target.setAttribute("class", "snb_area");
+            }
+
+        
+            </script>
+        
+        <div id="visual_wrap">
+            <div id="visual">
+                <div id="banner">
+                    <ul class="banner1">
+                        <li class="fadein"><img src="./images/image1.png"></li>
+                        <li class="fadein"><img src="./images/image2.png"></li>
+                        <li class="fadein"><img src="./images/image3.png"></li>
+                        <li class="fadein"><img src="./images/image4.png"></li>
+                        <li class="fadein"><img src="./images/image5.png"></li>
+                    </ul>
+                </div>
+                <div class="slide">
+                    <div id="bannerBtn">
+
+                
+                        <ul>
+                            <li onclick="bannerBtn(0)">AR/VR 특화과정</li>
+                            <li onclick="bannerBtn(1)">너도 될 수 있어!</li>
+                            <li onclick="bannerBtn(2)">KDT혁신교육기관</li>
+                            <li onclick="bannerBtn(3)">취업률1위</li>
+                            <li onclick="bannerBtn(4)">3년우수훈련기관</li>
+                        </ul> 
+                    
+                    </div>
+                </div>
+            
+    
+            </div>
+        </div>
+        <script>
+
+
+            var index=0;
+            var rolling = null;
+            banner(0);
+            function banner(n){
+               
+               bannerImg = document.querySelectorAll('.banner1 > li');
+           
+               if (index>=bannerImg.length) {
+                   index=0;
+               }
+    
+               if (n !=undefined){//인자값 있을 때 banner()가 실행될 때 (즉 setInteval을 사용할 때 실행)
+                    index = n;
+               }
+    
+                for (i=0; i<bannerImg.length; i++){
+                  // console.log(i, index);
+                   if (i==index){
+                    bannerImg.item(i).setAttribute('class','fadein on');
+    
+    
+                   } else{
+                    bannerImg.item(i).setAttribute('class','fadein');
+    
+                   }
+                }
+               // console.log(index);
+               index++;
+            }
+    
+            function bannerBtn(n){
+                clearInterval(rolling);
+            
+                banner(n);
+                rolling = setInterval(banner,3000);
+            }
+            rolling = setInterval(banner,3000);            
+                  
+        </script>
+    
+        <div id="container_wrap">
+            <div id="container">
+                <div class="big_box">
+                    <ul>
+                        <li class="box box1">
+                            <h2>
+                                <span>Game architecture</span>
+                                게임기획
+                            </h2>
+                            <p>
+                                게임기획자를 위한 정석 class
+                            </p>
+                            <a href="#">바로가기</a>
+                        </li>
+                        <li class="box box2">
+                            <h2>
+                                <span>Game Programming</span>
+                                게임프로그래밍
+                            </h2>
+                            <p>
+                                게임프로그래머를 위한 정석 class
+                            </p>
+                            <a href="#">바로가기</a>
+                        </li>
+                        <li class="box box3">
+                            <h2>
+                                <span>Blockchain</span>
+                                블록체인
+                            </h2>
+                            <p>
+                                블록체인개발을 위한 정석 class
+                            </p>
+                            <a href="#">바로가기</a>
+                        </li>
+                        <li class="box box4">
+                            <h2>
+                                <span>Game Artwork</span>
+                                게임원화
+                            </h2>
+                            <p>
+                                게임원화를 위한 정석 class
+                            </p>
+                            <a href="#">바로가기</a>
+                        </li>
+                        <li class="box box5">
+                            <h2>
+                                <span>AR/VR</span>
+                                AR/VR
+                            </h2>
+                            <p>
+                                증강현실/가상현실 class
+                            </p>
+                            <a href="#">바로가기</a>
+                        </li>
+                        <li class="box box6">
+                            <h2>
+                                <span>Progamer Coachingk</span>
+                                프로게이머 코칭
+                            </h2>
+                            <p>
+                                프로게이머 데뷔 class
+                            </p>
+                            <a href="#">바로가기</a>
+                        </li>
+                        <li class="box box7">
+                            <h2>
+                                공지사항
+                            </h2>
+                            <div id="list1">
+                                <ul>
+                                    <li><a href="#">-3월 블록체인반 모집임박</a></li>
+                                    <li><a href="#">-4월 VR/AR반 모집안내</a></li>
+                                    <li><a href="#">-4월 게임프로그래밍반 모집</a></li>
+                                    <li><a href="#">-2월 기획반 모집 마감안내</a></li>
+                                </ul>
+                            </div>
+                            <div id="list2">
+                                <ul>
+                                    <li>03-03</li>
+                                    <li>03-03</li>
+                                    <li>03-03</li>
+                                    <li>03-02</li>
+                                </ul>
+                            </div>
+                        
+                        </li>
+                        <li class="box box">
+                            <h2>
+                                상담/문의
+                            </h2>
+                            <P>
+                                <img src="./CSS/image/tel.png">
+                                
+                            </P>
+                            <p>
+                                <img src="./CSS/image/kakao.png">
+                                <button>
+                                    <img src="./CSS/image/btn.png">
+                                </button>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="big_box2">
+                    <div>
+                        <ul>
+                            <li class="box2-1">
+                                <h2>취업자인터뷰</h2>
+                                <a href="#"><img src="./CSS/image/btn_more.gif"></a>
+                                <img src="./CSS/image/1543220395_43861_2.png">
+                                <p> vR/AR 1기 김상균"경일은 교수님들도 잘 가르쳐주시고 제가 초조해지거나 
+                                    의욕이 꺾이지 않게분위기를 다잡아주셔서 공부가 더 잘 되었던 것 같습니다."카카오게임즈 </p>
+                                <span>
+                                    카카오게임즈 프로그래머 </br>
+                                    김상균 취업자
+                                </span> 
+                                <a class ="prev" href="#"><</a>
+                                <a class ="next" href="#">></a>
+                            </li>
+                            <li class="box2-2">
+                                <h2>수강후기</h2>
+                                <a href="#"><img src="./CSS/image/btn_more.gif"></a>
+                                <div style="clear: both;"></div>
+                                <ul>
+                                    <li>
+                                        <a href="#">슬기로운 경일생활</a>
+                                        <span>
+                                            [기획_정송기] 2021-03-13
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a href="#">슬기로운 경일생활</a>
+                                        <span>
+                                            [기획_정송기] 2021-03-13
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a href="#">슬기로운 경일생활</a>
+                                        <span>
+                                            [기획_정송기] 2021-03-13
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a href="#">슬기로운 경일생활</a>
+                                        <span>
+                                            [기획_정송기] 2021-03-13
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a href="#">슬기로운 경일생활</a>
+                                        <span>
+                                            [기획_정송기] 2021-03-13
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a href="#">슬기로운 경일생활</a>
+                                        <span>
+                                            [기획_정송기] 2021-03-13
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="box2-3">
+                                <h2>포트폴리오</h2>
+                                <a href="#"><img src="./CSS/image/btn_more.gif"></a>
+                                <iframe width="560" height="440" src="https://www.youtube.com/embed/TzLsPrkRKt4" frameborder="0"></iframe>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
+            <div id="story_wrap">
+                <div id="story">
+                    <ul>
+                        <li class="kistory">
+                            <h2>
+                                <span>K.I story</span>
+                                경일이야기
+                            </h2>
+                            <p>
+                                게임기획자를 위한 정석 class
+                            </p>
+                </div>
+                <div id="quickmenu">
+                  
+                <ul>
+                    <li>
+                        
+                        <img src="./CSS/image/right/quick_menu.gif">
+                    </li>
+                    <li>
+                        <a href="#">
+                        <img src="./CSS/image/right/quick_img_over01.gif">
+                        </a>
+                
+                    </li>
+                    <li>
+                        <a href="#">
+                        <img src="./CSS/image/right/quick_img_over02.gif">
+                        </a>
+                
+                    </li>
+                    <li>
+                        <a href="#">
+                        <img src="./CSS/image/right/quick_img_over03.gif">
+                        </a>
+                
+                    </li>
+                    <li>
+                        <a href="#">
+                        <img src="./CSS/image/right/quick_img_over05.gif">
+                        </a>
+                
+                    </li>
+                    <li>
+                        <a href="#">
+                        <img src="./CSS/image/right/quick_img_over06.gif">
+                        </a>
+                
+                    </li>
+                </ul>    
+                </div>
+        </div>
+           
+    
+
+    </div>
+    <script>
+
+
+        var index=0;
+        var rolling = null;
+        banner(0);
+        function banner(n){
+           
+           bannerImg = document.querySelectorAll('.banner1 > li');
+       
+           if (index>=bannerImg.length) {
+               index=0;
+           }
+
+           if (n !=undefined){//인자값 있을 때 banner()가 실행될 때 (즉 setInteval을 사용할 때 실행)
+                index = n;
+           }
+
+            for (i=0; i<bannerImg.length; i++){
+              // console.log(i, index);
+               if (i==index){
+                bannerImg.item(i).setAttribute('class','fadein on');
+
+
+               } else{
+                bannerImg.item(i).setAttribute('class','fadein');
+
+               }
+            }
+           // console.log(index);
+           index++;
+        }
+
+        function bannerBtn(n){
+            clearInterval(rolling);
+        
+            banner(n);
+            rolling = setInterval(banner,3000);
+        }
+        rolling = setInterval(banner,3000);
+        
+  
+        
+
+    </script>
+    
+</body>
+</html>

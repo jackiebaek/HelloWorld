@@ -1,0 +1,433 @@
+/*stylesheet*/
+
+*{margin:0;
+    padding:0;}
+
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+#wrap {
+    width:100%;
+}
+#header {
+    width:100%;
+    height:100%;
+    margin:0 auto;
+   
+}
+#header> #logo {
+    float:left;
+    width:200px;
+    padding: 10px 150px;
+}
+#header> #gnb{
+    float:left;
+    width:100%;
+    height:120px;
+}
+#header>#gnb > ul > li {
+    float:left;
+    height:120px;
+}
+#gnb > ul > li >a {
+    display:inline-block;
+ 
+    width: 180px;
+    font-size: 19px;
+    color:#004385;
+    font-weight: bold;
+
+    text-align:center;
+    padding:20px 0;
+
+}
+
+.snb_area{
+    
+    position: absolute;
+    width:100%;
+    height:500px;
+    z-index: 5;
+    top: 80px;
+    
+}
+
+#header > .snb_area{
+    position: absolute;
+    background :  rgba(0,1,1,0.5);
+    overflow:hidden;
+ 
+    width:100%;
+    height:0;    
+    z-index: 5;
+    top: 80px;
+}
+#header > .snb_area.navi {
+    animation:slider 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes slider{
+    from{
+        height:0px;
+    }to {
+        height:150px;
+    }
+}
+
+
+.snb_area > h2 {
+    float:left;
+    width:200px;
+    padding: 10px 150px;
+}
+.snb_area > ul  {
+    float:left;
+    width:180px;
+  
+    text-align: center;
+}
+
+.snb_area > ul > li {
+    padding: 3px 0;
+}
+
+.snb_area > ul > li > a  {
+
+    font-size :13px;
+    color:#ececec;
+    font-weight: bold;
+    
+
+}
+#visual_wrap{
+    width:100%;
+    height:500px;
+    
+    
+}
+#visual {
+
+    width:100%;
+    height:100%;
+    clear: both;
+    margin:0 0 30px 0;
+}
+
+#banner > ul > li {
+    margin-top: 120px;
+    display:none;
+    
+}
+
+#banner > ul > li.fadein{
+    animation:fadein 3s;
+}
+
+#banner > ul > li.on{
+    display:block; 
+    position:absolute;
+    top:0px;
+}
+
+@keyframes fadein{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+
+.slide{
+    position:absolute;
+    width:1920px;
+    bottom: 0;
+    height:50px;
+    background-color: rgba(0,1,1,0.5);
+    top:570px;
+    
+
+}
+#bannerBtn > ul {
+    width:1920px;
+    position:relative;
+    left:50%;
+    transform: translate(-50%);
+    cursor:pointer;
+}
+
+#bannerBtn > ul > li{
+    font-size: 17px;
+   
+     color:#ececec;
+ 
+}
+
+#bannerBtn > ul > li:hover {
+    background-color: rgba(2, 10, 10, 0.5);
+    height:30px;
+    
+}
+
+#quickmenu{
+    position:fixed;
+    top:0px;
+    right:0px;
+    height:100%;
+    background: #fff;
+    border-left: 1px solid #d9d9d9;
+
+
+}
+
+#container {
+    position:absolute;            
+    width:1920px;
+    height:1200px;
+    left:50%;
+    transform:translateX(-50%);
+    margin-top:620px;
+}
+.big_box {
+    width:600px;
+    float: left;
+    
+    
+}
+.box {
+    box-sizing: border-box;
+    width:300px;
+    height:230px;
+    border:1px solid #ececec;
+    padding:20px;
+    float:left;
+    
+}
+
+.box1 {
+    background:url('http://www.kiweb.or.kr/images/main_new/main_con_ic_01.png') right bottom no-repeat;
+    background-position: 178px 109px;
+
+}
+.box2 {
+    background:url('http://www.kiweb.or.kr/images/main_new/main_con_ic_02.png') right bottom no-repeat;
+    background-position: 178px 109px;
+
+}
+.box3 {
+    background:url('http://www.kiweb.or.kr/images/main_new/main_con_ic_04.png') right bottom no-repeat;
+    background-position: 178px 109px;
+
+}
+.box4 {
+    background:url('http://www.kiweb.or.kr/images/main_new/main_con_ic_05.png') right bottom no-repeat;
+    background-position: 178px 109px;
+
+}
+.box > h2 {
+    font-size: 23px;
+    color:#2d2d2d;
+}
+.box > h2> span {
+    font-size: 12px;
+    color:skyblue;
+    display:block;
+}
+.box > p{
+    width:50%;
+    margin:30px 000;
+    line-height: 20px;
+    display:block;
+
+}
+.box > a {
+    display:block;
+    margin-top: 40px;
+    font-size: 14px;
+    width:100px;
+    height:30px;
+    border-radius: 15px;
+    background:skyblue;
+    color:#fff;
+    text-align:center;
+    line-height:32px;
+}
+#list1 {
+    float:left;
+}
+#list2 {
+    float:right;
+    
+}
+#list1>ul>li>a {
+    font-size:12px;
+    color:#666666;
+    line-height: 30px;
+    
+}
+.box7 >h2{
+    margin:0 0 20px 0;
+    display:block;
+}
+#list2 > ul > li {
+    font-size: 12px;
+    color:#666666;
+    line-height: 30px;
+}
+button {
+    margin:0 0 0 70px;
+    border:none;
+}
+.box2-1 {
+    float: left;
+    width: 300px;
+    height: 415px;
+    padding: 20px;
+    border: 1px solid #ececec;
+    text-align: left;
+    box-sizing:border-box;
+}
+.box2-2 {
+    float: left;
+    width: 300px;
+    height: 415px;
+    padding: 20px;
+    border: 1px solid #ececec;
+    text-align: left;
+    box-sizing:border-box;
+}
+.box2-3 {
+    float: left;
+    width: 600px;
+    height: 600px;
+    padding: 20px;
+    border: 1px solid #ececec;
+    text-align: left;
+    box-sizing:border-box;
+    
+}
+.box2-1 > h2 {
+    float:left;
+    font-size:20px;
+    
+}
+.box2-1 > a {
+    float:right;
+    
+}
+.box2-1 > p {
+    font-size:12px;
+    color:#666;
+    margin: 15px 0;
+    line-height:22px;
+}
+.box2-1 > span {
+    text-align: center;
+    display:block;
+    font-size:12px;
+    color:#666;
+    line-height:22px;
+
+    
+}
+.box2-1 > img {
+    border:1px solid #ececec;
+    margin: 20px 0 0 9px;
+}
+
+.prev {
+    font-weight:bold;
+}
+
+.box2-2{
+    background:#FAFAFA;
+}
+
+.box2-2 > h2{
+    font-size:20px;
+    float:left;
+
+}
+
+.box2-2 > a {
+    float:right;
+}
+
+.box2-2>ul{
+    margin-top:20px;
+}
+.box2-2 > ul > li{
+   display:block;
+   text-align:right;
+   border:1px solid #ececec;
+   background:white;
+   padding:5px 10px;
+   margin:7px 0;
+}
+
+.box2-2 > ul > li > a{
+    display:block;
+    text-align:left;
+    font-size:14px;
+}
+
+.box2-2 > ul > li > span{
+    font-size:11px;
+}
+
+.box2-3>a{
+    float:right;
+}
+
+.box2-3>h2{
+    display:inline;
+}
+
+.box2-3>iframe{
+    margin-top:20px;
+}
+
+#quickmenu{
+    position:fixed;
+    top:0px;
+    right:0px;
+    height:100%;
+    background: #fff;
+    border-left: 1px solid #d9d9d9;
+
+
+}
+
+
+.prev{
+    position: absolute;
+    left: -20px;
+    top: 130px;
+    width: 20px;
+    height: 30px;
+    background: #eee;
+    line-height: 30px;
+    color: #fff;
+    outline: 0;
+}
+
+/*
+
+.kistory {
+    background:url('http://www.kiweb.or.kr/images/main_new/main_bbs_ic_01.pnghttp://www.kiweb.or.kr/images/main_new/main_bbs_ic_01.png') right bottom no-repeat;
+    background-position: 178px 109px;
+
+}
+.box2 {
+    background:url('http://www.kiweb.or.kr/images/main_new/main_con_ic_02.png') right bottom no-repeat;
+    background-position: 178px 109px;
+
+}
+.box3 {
+    background:url('http://www.kiweb.or.kr/images/main_new/main_con_ic_04.png') right bottom no-repeat;
+    background-position: 178px 109px;
+} */

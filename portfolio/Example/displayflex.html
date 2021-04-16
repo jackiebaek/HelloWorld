@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+            *{ 
+        margin:0; padding:0;
+    }
+            ul, li{list-style:none;}
+
+            .gnb{display:flex;
+                width:300px;
+                height: 900px;
+              
+                flex-direction: column; /*column으로 바꿔주면 일자로... 높이값도 지정해주면 모바일에서도 가능 */
+                flex-wrap: wrap; /* gnb width 600px 넘어가면 아래로 떨어뜨리겠다. nowrap은 일자로 */
+                justify-content: center; /* flex박스 안에 영역 정렬 */
+            }
+            .gnb > li {
+                width:200px;
+                height:300px;
+            }
+
+            .gnb > li:nth-child(1){background: red;}
+            .gnb > li:nth-child(2){background: blue;}
+            .gnb > li:nth-child(3){background: purple;}
+            .gnb > li:nth-child(4){background:pink;}
+            .gnb > li:nth-child(5){background:yellow;}
+            .gnb > li:nth-child(6){background:skyblue;}
+            .gnb > li:nth-child(7){background: black}
+
+
+
+        </style>
+</head>
+<body>
+    <ul class="gnb">
+        <li>1 </li>
+        <li>2 </li>
+        <li>3 </li>
+        <li>4 </li>
+        <li>5 </li>
+        <li>6 </li>
+        <li>7 </li>
+        
+    </ul>
+</body>
+</html>

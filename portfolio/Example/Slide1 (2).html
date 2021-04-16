@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+        ul,li{
+            list-style:none;
+        }
+
+        #banner{
+            display:flex;
+            height:300px;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            margin-top:150px;
+            width:300px;
+            overflow:hidden;
+        }
+
+        #banner > li{
+            width:300px;
+            flex-shrink:0;
+        }
+
+        .hero{
+            display:none;
+        }
+
+        .on{
+            display:block !important;
+        }
+
+        .out{
+            display:none;
+        }
+
+        #banner > li:nth-child(1){background:red;}
+        #banner > li:nth-child(2){background:blue}
+        #banner > li:nth-child(3){background:pink}
+        #banner > li:nth-child(4){background:yellow;}
+        #banner > li:nth-child(5){background:wheat}
+        #banner > li:nth-child(6){background:violet}
+        #banner > li:nth-child(7){background:yellowgreen}
+        #banner > li:nth-child(8){background:turquoise}
+        #banner > li:nth-child(9){background:tomato}
+    </style>
+</head>
+<body>
+    <ul id="banner" class='gnb'>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <ul id="banner" class='gnb2'>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <ul id="banner" class='gnb3'>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script type="text/javascript">
+        function Banner(data){
+            let index = 0;
+            function slide(n){
+                flag = (n == undefined) ? true : false;
+                let ul = document.querySelectorAll(data.bannerContainer);
+                if (index == ul.length ) index = 0;
+                let beNum = (index == 0) ? (ul.length-1) : index-1;
+                console.log(ul);
+                ul.item(index).setAttribute(data.bannerItemId,data.bannerItemIdOn);
+                if(flag) ul.item(beNum).setAttribute(data.bannerItemId,data.bannerItemIdOut);
+
+                ul.forEach((ele,i) =>{
+                    if(i!=index && i!=beNum){
+                        ele.setAttribute(data.bannerItemId,data.bannerItemIdDefault);
+                    }xp
+                });
+                
+                index++;
+                console.log(index);
+                setTimeout(slide,data.bannerTimer);
+            }
+            slide(0);
+        }
+
+
+        let json = [
+            {
+                bannerContainer:'.gnb > li',
+                bannerItemId:'class',
+                bannerItemIdDefault:'hero',
+                bannerItemIdOn:'hero on',
+                bannerItemIdOut:'hero out',
+                bannerTimer:1000,
+            },
+            {
+                bannerContainer:'.gnb2 > li',
+                bannerItemId:'class',
+                bannerItemIdDefault:'hero',
+                bannerItemIdOn:'hero on',
+                bannerItemIdOut:'hero out',
+                bannerTimer:1500,
+            },
+            {
+                bannerContainer:'.gnb3 > li',
+                bannerItemId:'class',
+                bannerItemIdDefault:'hero',
+                bannerItemIdOn:'hero on',
+                bannerItemIdOut:'hero out',
+                bannerTimer:2000,
+            }
+        ]
+        
+        Banner(json[0]);
+        //Banner(json[1]);
+        //Banner(json[2]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        arr = new Array();
+        arr = [];
+
+        arr =[,,,,];
+        console.log(arr);
+        arr = [1,2,3]; //[1,2,3];
+
+        //Array push()
+        arr.push(3)  //배열에 push넣으면 뒤에 추가적으로 하나가 더 붙음  [1,2,3,3]
+        arr.push(4)  //[1,2,3,3,4]
+        
+        arr.push(5) // [1,2,3,3,4,5]
+        console.log(arr); 
+
+        //Array push의 반대, 항상 맨 마지막 값이 제거됨
+        arr.pop(); //[1,2,3,3,4]
+        console.log(arr);
+        arr.pop();
+        arr.pop(); //[1,2,3] 이것은 pop()을 사용하게되면 바로 결과물을 만들어 줌
+
+        arr.push(4);
+        arr.push(5);
+        arr.push(6);
+        arr.push(7);
+        arr.push(8);
+        arr.push(9);
+        arr.push(10);
+        console.log(arr);
+        // key [1,2,3,4,5,6,7,8,9,10]
+        //value [0,1,2,3,4,5,6,7,8,9,10]
+        console.log(arr.indexOf(4,0)) //1: 찾을 요소 2: 어디서부터 찾을지 
+        console.log(arr.indexOf(4,4)) //-1 찾을 수 없다. 
+        console.log(arr.indexOf(4,2)); 3
+
+        
+        arr.indexof()  //요즘 많이 안씀 위치값 찾는 것 indexof 인자값이 2개 들어감
+        arr.indexof() // 1: 찾을 요수 2: 어디서부터 찾을지
+
+    </script>
+
+<body>
+    
+</body>
+</html>

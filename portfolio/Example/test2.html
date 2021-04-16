@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let donut;
+        let box = 0;
+        let result;
+        function action(x){
+            donut = x;
+            if (donut%5 == 0){
+                result = (donut/5) + box;  //5로 나눠줘서 0이 나오면 모두 떨구고//
+                return result;
+            } else if (donut <= 2){
+                result = -1;
+                return result;
+            }
+
+            donut = donut-3;
+            box++;
+            action(donut);
+        }
+
+        action(17);
+        console.log(result);
+    </script>
+</body>
+</html> 
+<!---  
+    7-3 = 4
+4-3 = 1
+
+    --->

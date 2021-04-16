@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./effect.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1 id="logo">
+                <a href="#"><img src="./css/image/logo.png"> </a>
+
+            </h1>
+            <div id="gnb" >
+                <ul onmouseover="mouseIn();" onmouseout="mouseOut();">
+                    <li><a href="#">학교소개</a></li>
+                    <li><a href="#">교육과정</a></li>
+                    <li><a href="#">취업정보</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                    <li><a href="#">상담신청</a></li>
+                </ul>
+            </div>
+
+            <div class="snb_area" onmouseover="mouseIn();" onmouseout="mouseOut();">
+                <h2><img src="./newimages/snb_img.png"></h2>
+                <ul>
+                    <li><a href="#"> 인사말</a></li>
+                    <li><a href="#">연혁</a></li>
+                    <li><a href="#">교직원소개</a></li>
+                    <li><a href="#">시설소개</a></li>
+                    <li><a href="#">오시는길</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">교육과정</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">취업자인터뷰</a></li>
+                    <li><a href="#">취업현황</a></li>
+                    <li><a href="#">포트폴리오</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">수강후기</a></li>
+                    <li><a href="#">KI이야기</a></li>
+                    <li><a href="#">KI기자단</a></li>
+                    <li><a href="#">교수칼럼</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">상담신청</a></li>
+                    <li><a href="#">지원하기</a></li>
+                    <li><a href="#">자주묻는질문</a></li>
+                    
+            
+                </ul>
+            <script>
+                var target = document.querySelector(".snb_area");
+            function mouseIn(){
+                target.setAttribute("class", "snb_area navi");
+            }
+            function mouseOut(){
+                target.setAttribute("class", "snb_area");
+            }
+
+        
+            </script>
+        </div>
+        <div id="visual">
+            <div id="banner">
+                <ul class="banner1">
+                    <li class="fadein"><img src="./images/image1.png"></li>
+                    <li class="fadein"><img src="./images/image2.png"></li>
+                    <li class="fadein"><img src="./images/image3.png"></li>
+                    <li class="fadein"><img src="./images/image4.png"></li>
+                    <li class="fadein"><img src="./images/image5.png"></li>
+                </ul>
+            </div>
+            <div class="slide">
+                <div id="bannerBtn">
+
+               
+                    <ul>
+                        <li onclick="bannerBtn(0)">AR/VR 특화과정</li>
+                        <li onclick="bannerBtn(1)">너도 될 수 있어!</li>
+                        <li onclick="bannerBtn(2)">KDT혁신교육기관</li>
+                        <li onclick="bannerBtn(3)">취업률1위</li>
+                        <li onclick="bannerBtn(4)">3년우수훈련기관</li>
+                    </ul> 
+                   
+                </div>
+            </div>
+         
+  
+        </div>
+
+        <script>
+
+
+            var index=0;
+            var rolling = null;
+            banner(0);
+            function banner(n){
+               
+               bannerImg = document.querySelectorAll('.banner1 > li');
+           
+               if (index>=bannerImg.length) {
+                   index=0;
+               }
+    
+               if (n !=undefined){//인자값 있을 때 banner()가 실행될 때 (즉 setInteval을 사용할 때 실행)
+                    index = n;
+               }
+    
+                for (i=0; i<bannerImg.length; i++){
+                  // console.log(i, index);
+                   if (i==index){
+                    bannerImg.item(i).setAttribute('class','fadein on');
+    
+    
+                   } else{
+                    bannerImg.item(i).setAttribute('class','fadein');
+    
+                   }
+                }
+               // console.log(index);
+               index++;
+            }
+    
+            function bannerBtn(n){
+                clearInterval(rolling);
+            
+                banner(n);
+                rolling = setInterval(banner,3000);
+            }
+            rolling = setInterval(banner,3000);
+            
+      
+            
+    
+        </script>
+        
+ <div id="quickmenu">
+                    
+    <ul>
+        <li>
+            
+            <img src="./CSS/image/right/quick_menu.gif">
+        </li>
+        <li>
+            <a href="#">
+            <img src="./CSS/image/right/quick_img_over01.gif">
+            </a>
+    
+        </li>
+        <li>
+            <a href="#">
+            <img src="./CSS/image/right/quick_img_over02.gif">
+            </a>
+    
+        </li>
+        <li>
+            <a href="#">
+            <img src="./CSS/image/right/quick_img_over03.gif">
+            </a>
+    
+        </li>
+        <li>
+            <a href="#">
+            <img src="./CSS/image/right/quick_img_over05.gif">
+            </a>
+    
+        </li>
+        <li>
+            <a href="#">
+            <img src="./CSS/image/right/quick_img_over06.gif">
+            </a>
+    
+        </li>
+    </ul>    
+    </div>
+        

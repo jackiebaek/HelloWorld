@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        
+        function hello(){
+            console.log('Hello world');
+            return 1;
+        }
+        let hello2 = function(){   //변수를 아래에 넣어서 나옴, 위에 넣으면 안나옴 
+            /* code block*/
+            console.log('Hello world2');
+        }
+        hello2();
+        //익명함수 => 화살표 함수
+        
+        let hello3 = (num) => {console.log('Hello world3'+num)};
+        hello3(3);
+
+        let hello4 = num => {
+            console.log('Hello world'+num);
+        }
+        hello4(4);
+
+        window.addEventListener('DomcontentLoaded', init);
+        function init(){
+            let gnb = document.querySelectorAll('.gnb>li');
+            gnb.forEach(ele=>{   //인자값이 두개 이상일 경우는 gnb.forEach((ele,index)=> 가로를 두개써줘야
+                console.log(ele);
+            });
+        }
+    </script>
+</head>
+<body>
+    <ul class="gnb">
+
+
+    </ul>
+</body>
+</html>

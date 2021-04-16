@@ -1,0 +1,33 @@
+@media screen and (max-width: 1095px) {
+    #header{
+        height:50px;
+        
+        position:fixed;
+        width:100%;
+        top:0px;
+        background:#fff;
+    }
+    
+    }
+    .inner > ul.gnb{
+        display:none;
+    }
+  
+    .inner > div#side_area{
+        display:block;
+    }
+
+    #main_visual{
+        height:300px;
+    }
+
+    .main_contents{
+        width:100%;
+        padding: 55px 0 100px 0;
+    }
+
+    #footer{
+        height:50px;
+    }
+}
+/*space between은 양쪽 정렬 */
